@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<Button 
+	    android:id="@+id/startSearchBtn"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="开始搜索"
+	    />
+	
+	<TextView 
+	    android:id="@+id/clientServersText"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginBottom="10dp"
+	    android:text="sasasa"
+	    />
+	
+	<Button 
+	    android:id="@+id/selectDeviceBtn"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="选择第一个设备"
+	    />
+	
+	<EditText 
+	    android:id="@+id/clientChatEditText"
+	    android:layout_width="match_parent"
+	    android:layout_height="200dp"
+	    android:background="#aaa"
+	    android:layout_margin="5dp"
+	    android:singleLine="false"
+	    />
+	
+	<EditText 
+	    android:id="@+id/clientSendEditText"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	   ></EditText>
+	
+	<Button 
+	    android:id="@+id/clientSendMsgBtn"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="发送"
+	    />
+</LinearLayout>
