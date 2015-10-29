@@ -22,6 +22,16 @@ public class BluetoothTools {
 	//点击事发送数据
 	public static final String ACTION_DATA_TO_SERVICE = "ACTION_DATA_TO_SERVICE";
 	
+	public static final String ACTION_NOT_FOUND_SERVER = "ACTION_NOT_FOUND_DEVICE";
+	
+	public static final String ACTION_FOUND_SERVER = "ACTION_FOUND_DEVICE";
+	
+	public static final String ACTION_START_DISCOVERY = "ACTION_START_DISCOVERY";
+	
+	public static final String ACTION_SELECTED_DEVICE = "ACTION_SELECTED_DEVICE";
+	
+	public static final String DEVICE = "DEVICE";
+	
 	public static final int MESSAGE_CONNECT_SUCCESS = 0x00000002;
 	
 	public static final int MESSAGE_CONNECT_ERROR = 0x00000003;

@@ -3,7 +3,10 @@
     package="com.example.bluetooth"
     android:versionCode="1"
     android:versionName="1.0" >
-
+    
+  	<uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    
     <uses-sdk
         android:minSdkVersion="16"
         android:targetSdkVersion="21" />
@@ -22,6 +25,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ClientActivity"></activity>
+        <activity android:name=".ServerActivity"></activity>
+        <service android:name=".BluetoothClientService" ></service>
+        <service android:name=".BlurtoothServerService" ></service>
+      
     </application>
 
 </manifest>
