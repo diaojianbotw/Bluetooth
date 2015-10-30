@@ -24,7 +24,9 @@ public class BluetoothTools {
 	
 	public static final String ACTION_NOT_FOUND_SERVER = "ACTION_NOT_FOUND_DEVICE";
 	
-	public static final String ACTION_FOUND_SERVER = "ACTION_FOUND_DEVICE";
+	public static final String ACTION_FOUND_SERVER = "ACTION_FOUND_SERVER";
+	
+	public static final String ACTION_FOUND_DEVICE = "ACTION_FOUND_DEVICE";
 	
 	public static final String ACTION_START_DISCOVERY = "ACTION_START_DISCOVERY";
 	

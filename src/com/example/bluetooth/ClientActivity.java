@@ -40,7 +40,7 @@ public class ClientActivity extends Activity {
 			if(BluetoothTools.ACTION_NOT_FOUND_SERVER.equals(action))
 			{
 				serversText.setText("未发现设备");
-			} else if(BluetoothTools.ACTION_FOUND_SERVER.equals(action))
+			} else if(BluetoothTools.ACTION_FOUND_DEVICE.equals(action))
 			{
 				BluetoothDevice device = (BluetoothDevice) intent.getExtras().get(BluetoothTools.DEVICE);
 				devicelist.add(device);
@@ -123,10 +123,10 @@ public class ClientActivity extends Activity {
 		
 		IntentFilter intentFilter = new IntentFilter();
 		intentFilter.addAction(BluetoothTools.ACTION_NOT_FOUND_SERVER);
-		intentFilter.addAction(BluetoothTools.ACTION_FOUND_SERVER);
+		intentFilter.addAction(BluetoothTools.ACTION_FOUND_DEVICE);
 		intentFilter.addAction(BluetoothTools.ACTION_CONNECT_SUCCESS);
 		intentFilter.addAction(BluetoothTools.ACTION_CONNECT_ERROR);
-		intentFilter.addAction(BluetoothTools.ACTION_CONNECT_ERROR);
+		intentFilter.addAction(BluetoothTools.ACTION_DATA_TO_GAME);
 		registerReceiver(broadcastReceiver, intentFilter);
 		super.onStart();
 	}

@@ -40,7 +40,7 @@ public class BluetoothClientService extends Service{
 				//选择所选的设备
 				BluetoothDevice device = (BluetoothDevice) intent.getExtras().get(BluetoothTools.DEVICE);
 				//开启设备连接
-				new BluetoothClientConnThread(handler,device);
+				new BluetoothClientConnThread(handler,device).start();
 			} else if(BluetoothTools.ACTION_STOP_SERVICE.equals(action)){
 				if(communThread!=null)
 				{
@@ -69,8 +69,8 @@ public class BluetoothClientService extends Service{
 			{
 				BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
 				discoveredDevices.add(device);
-				Intent deviceIntent = new Intent(BluetoothTools.ACTION_FOUND_SERVER);
-				deviceIntent.putExtra(BluetoothTools.DEVICE, deviceIntent);
+				Intent deviceIntent = new Intent(BluetoothTools.ACTION_FOUND_DEVICE);
+				deviceIntent.putExtra(BluetoothTools.DEVICE, device);
 				sendBroadcast(deviceIntent);
 			} else if(adapter.ACTION_DISCOVERY_FINISHED.equals(action))
 			{

@@ -19,7 +19,7 @@ public class BluetoothServerConnThread extends Thread{
 	public BluetoothServerConnThread(Handler handler)
 	{
 		this.serviceHandler = handler;
-		adapter.getDefaultAdapter();
+		adapter = BluetoothAdapter.getDefaultAdapter();
 	}
 	@Override
 	public void run() {
